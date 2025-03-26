@@ -1,0 +1,92 @@
+<div class="questions-container">
+    <div class="overlay"></div>
+    <div class="content">
+        <h2 class="title">Let's make this fun! 💕</h2>
+
+
+        <!-- <label>🌍 If we could go anywhere for a date, what would you choose?</label>
+        <div class="radio-group Question_One">
+            <label>
+                <input type="radio" name="favoritePlace" [(ngModel)]="favoritePlace" value="Candlelight Dinner 🍷">
+                Candlelight Dinner
+            </label>
+            <label>
+                <input type="radio" name="favoritePlace" [(ngModel)]="favoritePlace" value="Beach Date 🌊"> Beach date
+            </label>
+            <label>
+                <input type="radio" name="favoritePlace" [(ngModel)]="favoritePlace" value="Movie Night"> Movie Night
+            </label>
+            <label>
+                <input type="radio" name="favoritePlace" [(ngModel)]="favoritePlace" value="Road kadai">
+                Road Kadai
+            </label>
+        </div>
+
+
+        <label>🍕 What’s the perfect meal for our date?</label>
+        <div class="radio-group Question_two">
+            <label>
+                <input type="radio" name="favoritePlace" [(ngModel)]="favoriteFood" value="Pasta">
+                Pasta
+            </label>
+            <label>
+                <input type="radio" name="favoritePlace" [(ngModel)]="favoriteFood" value="Pizza"> Pizza
+            </label>
+            <label>
+                <input type="radio" name="favoritePlace" [(ngModel)]="favoriteFood" value="Mutta Dosa"> Egg Dosa
+            </label>
+            <label>
+                <input type="radio" name="favoritePlace" [(ngModel)]="favoriteFood" value="Me">
+                Me
+            </label>
+        </div> -->
+        <!-- First Question -->
+        <label>🌍 If we could go anywhere for a date, what would you choose?</label>
+        <div class="radio-group Question_One">
+            <label (click)="selectOption('Question_One', 'Candlelight Dinner 🍷')">
+                <input type="radio" name="favoritePlace" [(ngModel)]="favoritePlace" value="Candlelight Dinner 🍷">
+                Candlelight Dinner
+            </label>
+            <label (click)="selectOption('Question_One', 'Beach Date 🌊')">
+                <input type="radio" name="favoritePlace" [(ngModel)]="favoritePlace" value="Beach Date 🌊">
+                Beach date
+            </label>
+            <label (click)="selectOption('Question_One', 'Movie Night')">
+                <input type="radio" name="favoritePlace" [(ngModel)]="favoritePlace" value="Movie Night">
+                Movie Night
+            </label>
+            <label (click)="selectOption('Question_One', 'Road kadai')">
+                <input type="radio" name="favoritePlace" [(ngModel)]="favoritePlace" value="Road kadai">
+                Road Kadai
+            </label>
+        </div>
+
+        <!-- Second Question -->
+        <label>🍕 What’s the perfect meal for our date?</label>
+        <div class="radio-group Question_Two">
+            <label (click)="selectOption('Question_Two', 'Pasta')">
+                <input type="radio" name="favoriteFood" [(ngModel)]="favoriteFood" value="Pasta">
+                Pasta
+            </label>
+            <label (click)="selectOption('Question_Two', 'Pizza')">
+                <input type="radio" name="favoriteFood" [(ngModel)]="favoriteFood" value="Pizza">
+                Pizza
+            </label>
+            <label (click)="selectOption('Question_Two', 'Mutta Dosa')">
+                <input type="radio" name="favoriteFood" [(ngModel)]="favoriteFood" value="Mutta Dosa">
+                Egg Dosa
+            </label>
+            <label (click)="selectOption('Question_Two', 'Me')">
+                <input type="radio" name="favoriteFood" [(ngModel)]="favoriteFood" value="Me">
+                Me
+            </label>
+        </div>
+
+        <div class="question-box">
+            <label>💖 What’s your ideal way to spend time together?</label>
+            <input type="text" class="text-option" [(ngModel)]="romanticMoment" placeholder="Type your answer..." />
+        </div>
+
+        <button (click)="goToFinalQuestion()">Next ➡️</button>
+    </div>
+</div>

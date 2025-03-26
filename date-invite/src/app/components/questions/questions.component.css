@@ -1,0 +1,253 @@
+/* Romantic Background */
+.questions-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3, #ff95c5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Overlay for Soft Glow */
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* Content Box */
+.content {
+    position: relative;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    max-width: 600px;
+    width: 90%;
+}
+
+/* Title Styling */
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.8);
+    animation: fadeIn 2s ease-in-out infinite alternate;
+}
+
+/* Romantic Image */
+.romantic-image {
+    width: 150px;
+    height: auto;
+    margin: 15px 0;
+    animation: heartBeat 2s infinite alternate;
+}
+
+/* Label Styling */
+label {
+    display: block;
+    font-size: 18px;
+    margin: 15px 0 5px;
+    color: white;
+    text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.8);
+}
+
+/* Input Fields */
+input {
+    width: 80%;
+    padding: 10px;
+    border: 2px solid #ff4da6;
+    border-radius: 8px;
+    font-size: 16px;
+    outline: none;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* Next Button */
+button {
+    display: block;
+    margin: 20px auto;
+    background-color: #ff4da6;
+    color: white;
+    font-size: 18px;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.4s;
+    box-shadow: 0 0 15px rgba(255, 75, 75, 0.8);
+    animation: pulse 2s infinite;
+}
+
+/* Button Hover Effect */
+button:hover {
+    background-color: #ff1a75;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 75, 75, 1);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    0% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes heartBeat {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Heart Animation Background */
+.questions-container::before {
+    content: "❤️";
+    font-size: 100px;
+    opacity: 0.2;
+    position: absolute;
+    animation: floatingHearts 5s infinite linear;
+    top: 10%;
+    left: 10%;
+}
+
+.questions-container::after {
+    content: "💕";
+    font-size: 120px;
+    opacity: 0.2;
+    position: absolute;
+    animation: floatingHearts 6s infinite linear reverse;
+    bottom: 10%;
+    right: 10%;
+}
+
+/* Floating Hearts Animation */
+@keyframes floatingHearts {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-30px) rotate(10deg);
+    }
+
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+.radio-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+
+}
+
+.radio-group label {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 12px;
+    border-radius: 8px;
+    width: 80%;
+    text-align: center;
+    font-size: 16px;
+    margin: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: normal;
+}
+
+.radio-group label.selected {
+    background: #ff4da6 !important;
+    /* Romantic pink */
+    color: white !important;
+    border: 2px solid #ff1a75 !important;
+    /* Darker pink for contrast */
+    font-weight: bold;
+    box-shadow: 0 0 15px rgba(255, 75, 150, 0.8);
+    /* Soft pink glow */
+    transform: scale(1.05);
+    /* Slight pop effect */
+    transition: all 0.3s ease-in-out;
+}
+
+
+.radio-group label:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* Hide default radio button */
+.radio-group input[type="radio"] {
+    display: none;
+}
+
+/* Custom Radio Button Style */
+.radio-group input[type="radio"]+label {
+    display: inline-block;
+    padding: 10px;
+    border: 2px solid transparent;
+    transition: 0.3s;
+}
+
+/* Style when selected */
+.radio-group input[type="radio"]:checked+label {
+    background: #ff4da6;
+    color: white;
+    border: 2px solid #ff1a75;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(255, 75, 75, 0.8);
+}
+
+.text-option {
+    width: 60%;
+    /* Reduce width slightly for a better look */
+    padding: 12px;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 8px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.15);
+    color: white;
+    text-align: center;
+    /* Center the text inside */
+    outline: none;
+    transition: 0.3s;
+    display: block;
+    /* Ensures it behaves like a block element */
+    margin: 10px auto;
+    /* Centers it horizontally */
+}
+
+.text-option::placeholder {
+    color: rgba(255, 255, 255, 0.7);
+}

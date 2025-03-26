@@ -1,0 +1,139 @@
+/* Final Question Container */
+.final-container {
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    padding: 50px;
+    color: #fff;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3, #ff95c5);
+    /* Romantic gradient */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glowing Question Text */
+h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+    animation: fadeIn 2s ease-in-out;
+}
+
+/* Heart Animation Background */
+.final-container::before {
+    content: "❤️";
+    font-size: 100px;
+    opacity: 0.2;
+    position: absolute;
+    animation: floatingHearts 5s infinite linear;
+    top: 10%;
+    left: 10%;
+}
+
+.final-container::after {
+    content: "💕";
+    font-size: 120px;
+    opacity: 0.2;
+    position: absolute;
+    animation: floatingHearts 6s infinite linear reverse;
+    bottom: 10%;
+    right: 10%;
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    position: relative;
+}
+
+/* YES Button (Glowing Effect) */
+.yes-btn {
+    background: linear-gradient(45deg, #00ff99, #00cc66);
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0 0 15px rgba(0, 255, 153, 0.7);
+    animation: pulse 2s infinite;
+}
+
+.yes-btn:hover {
+    background: linear-gradient(45deg, #00cc66, #00994d);
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 255, 153, 1);
+}
+
+/* NO Button (Animated Escape) */
+.no-btn {
+    background: linear-gradient(45deg, #ff4d4d, #cc0000);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s;
+    position: relative;
+    box-shadow: 0 0 10px rgba(255, 75, 75, 0.8);
+}
+
+.no-btn:hover {
+    background: linear-gradient(45deg, #cc0000, #990000);
+    box-shadow: 0 0 15px rgba(255, 75, 75, 1);
+
+}
+
+/* Floating Hearts Animation */
+@keyframes floatingHearts {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-30px) rotate(10deg);
+    }
+
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Pulse Animation for YES Button */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

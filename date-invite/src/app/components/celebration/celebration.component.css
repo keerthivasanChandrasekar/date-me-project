@@ -1,0 +1,100 @@
+.celebration-container {
+    text-align: center;
+    color: #fff;
+    font-family: 'Great Vibes', cursive;
+    padding: 50px;
+    background: linear-gradient(135deg, #ff758c, #ff7eb3);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Romantic Glowing Text */
+.glowing-text {
+    font-size: 3rem;
+    text-shadow: 2px 2px 15px rgba(255, 255, 255, 0.9);
+}
+
+/* Romantic Message */
+.romantic-message {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-style: italic;
+    opacity: 0.9;
+}
+
+/* Date Details Box */
+.date-details {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 12px;
+    width: 50%;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.3);
+    font-size: 1.2rem;
+}
+
+/* Romantic Couple Image */
+.romantic-image {
+    width: 250px;
+    margin-top: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.5);
+}
+
+/* Floating Hearts Animation */
+.heart {
+    position: absolute;
+    font-size: 20px;
+    color: #ff4da6;
+    animation: floatUp 5s linear infinite;
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
+
+/* Heart Animation Background */
+.celebration-container::before {
+    content: "❤️";
+    font-size: 100px;
+    opacity: 0.2;
+    position: absolute;
+    animation: floatingHearts 5s infinite linear;
+    top: 10%;
+    left: 10%;
+}
+
+.celebration-container::after {
+    content: "💕";
+    font-size: 120px;
+    opacity: 0.2;
+    position: absolute;
+    animation: floatingHearts 6s infinite linear reverse;
+    bottom: 10%;
+    right: 10%;
+}
+
+/* Floating Hearts Animation */
+@keyframes floatingHearts {
+    0% {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    50% {
+        transform: translateY(-30px) rotate(10deg);
+    }
+
+    100% {
+        transform: translateY(0px) rotate(0deg);
+    }
+}
